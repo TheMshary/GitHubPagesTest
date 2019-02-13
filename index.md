@@ -1,37 +1,87 @@
-## Welcome to GitHub Pages
+#### Python
 
-You can use the [editor on GitHub](https://github.com/darkwight/GitHubPagesTest/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```python
+def article_detail(request, article_id):
+    article = Article.objects.get(id=article_id)
+    context = {
+        'object': article,
+    }
+    return render(request, "article_detail.html", context)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+#### Console
 
-### Jekyll Themes
+```console
+$ python manage.py makemigrations
+$ python manage.py migrate -S lovelace
+(virtualenv_name)$ python manage.py migrate
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/darkwight/GitHubPagesTest/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+#### Bash
 
-### Support or Contact
+```bash
+$ python manage.py makemigrations
+$ python manage.py migrate
+(virtualenv_name)$ python manage.py migrate
+```
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#### Shell
+
+```shell
+$ python manage.py makemigrations
+$ python manage.py migrate
+(virtualenv_name)$ python manage.py migrate
+```
+
+#### Zsh
+
+```zsh
+$ python manage.py makemigrations
+$ python manage.py migrate
+(virtualenv_name)$ python manage.py migrate
+```
+
+#### Nada
+
+```
+$ python manage.py makemigrations
+$ python manage.py migrate
+$ python manage.py migrate
+```
+
+#### Bash Shebang w/venv
+
+```
+#!bash
+$ python manage.py makemigrations
+$ python manage.py migrate
+(virtualenv_name)$ python manage.py migrate
+```
+
+#### Shell Shebang w/venv
+
+```
+#!shell
+$ python manage.py makemigrations
+$ python manage.py migrate
+(virtualenv_name)$ python manage.py migrate
+```
+
+#### Console Shebang w/venv
+
+```
+#!console
+$ python manage.py makemigrations
+$ python manage.py migrate
+(virtualenv_name)$ python manage.py migrate
+```
+
+#### Python Shebang
+
+    #!python
+    def article_detail(request, article_id):
+        article = Article.objects.get(id=article_id)
+        context = {
+            'object': article,
+        }
+        return render(request, "article_detail.html", context)
