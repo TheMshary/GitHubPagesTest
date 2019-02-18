@@ -1,0 +1,3 @@
+function unlockSecret() {
+  $("#secret").toggle();
+}
